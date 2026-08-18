@@ -1,0 +1,104 @@
+@media (max-width:800px){
+.hero-note-arrow{left:22%!important;top:38%!important}
+.meeting .copy,.meeting .wide-copy,.meeting h2{width:100%!important;max-width:100%!important}.meeting h2{font-size:clamp(48px,12.4vw,68px)!important;line-height:.9!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important}
+.human .copy,.inspiration .copy{width:100%!important;margin:0!important;padding-right:0!important}.personal-one,.inspiration .personal-two{position:relative!important;inset:auto!important;display:block!important;width:min(31%,145px)!important;height:172px!important;margin:22px 1% 18px auto!important;z-index:4!important}.personal-one img,.personal-two img{width:100%!important;height:100%!important;object-fit:cover!important}.scrap-grid{margin-top:12px!important}.scrap-4{padding-right:108px!important;overflow:visible!important}.adult-inline{position:absolute!important;inset:50% 12px auto auto!important;width:86px!important;height:64px!important;transform:translateY(-50%)!important;z-index:9!important}.human-autumn,.human-cats{z-index:7!important}
+.inspiration{padding-bottom:170px!important}.approach{padding-bottom:190px!important}.approach .insp-cat{position:absolute!important;inset:auto auto 26px 8%!important;width:22%!important;max-width:110px!important;z-index:6!important}.approach-cat{right:4%!important;bottom:28px!important;z-index:6!important}
+.requests{padding-bottom:62px!important}.diagnosing-cat,.request-cat{position:relative!important;inset:auto!important;display:block!important;z-index:8!important}.diagnosing-cat{width:min(24%,115px)!important;margin:-34px 2% 18px auto!important}.request-cat{width:min(20%,96px)!important;margin:12px auto 0 8%!important}
+.work-two img{object-position:right center!important}
+.booking,.booking .copy{display:block!important}.booking .copy,.booking h2,.booking .copy p{width:100%!important;max-width:100%!important}.booking h2{font-size:clamp(48px,12.5vw,68px)!important;line-height:.92!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important}.booking .calendar-button{position:relative!important;inset:auto!important;display:flex!important;width:100%!important;max-width:100%!important;margin:28px 0 0!important;clear:both!important}
+}
+
+/* Экран подготовки первого экрана сайта. */
+body.is-loading{overflow:hidden!important}
+body.is-loading>main{visibility:hidden}
+.site-preloader{animation:preloader-failsafe 0s linear 6.2s forwards}
+body.is-loading>main{animation:main-failsafe 0s linear 6.2s forwards}
+.site-preloader{position:fixed;z-index:99999;inset:0;display:grid;place-items:center;padding:24px;background-color:#eee8da;background-image:radial-gradient(#282b4a24 .75px,transparent .75px);background-size:7px 7px;opacity:1;visibility:visible;transition:opacity .48s ease,visibility .48s ease}
+.site-preloader:before{content:"";position:absolute;width:min(68vw,330px);height:42px;top:9%;left:50%;background:#c6aa86aa;transform:translateX(-50%) rotate(-3deg)}
+.preloader-card{position:relative;width:min(86vw,440px);min-height:400px;padding:30px 24px 28px;text-align:center;background:#f4c9d6;box-shadow:13px 15px 0 #830626;transform:rotate(-1deg)}
+.preloader-title{margin:0 0 8px;color:#830626;font:700 13px/1.2 "Courier New",monospace;letter-spacing:.1em;text-transform:uppercase}
+.preloader-cat{display:flex;align-items:flex-end;justify-content:center;width:150px;height:118px;margin:0 auto 8px;font-size:72px;line-height:1;filter:drop-shadow(3px 5px 2px #282b4a24);animation:preloader-cat 1.45s ease-in-out infinite}.preloader-cat span+span{font-size:50px;margin:0 0 2px -22px}
+.preloader-phrase{min-height:58px;margin:0;color:#282b4a;font:italic 27px/1.05 Georgia,serif;transition:opacity .2s ease,transform .2s ease}
+.preloader-phrase.is-changing{opacity:0;transform:translateY(9px)}
+.preloader-track{height:8px;margin:26px 8px 22px;background:#eee8da;border:1px solid #282b4a55;overflow:hidden;transform:rotate(1deg)}
+.preloader-track span{display:block;width:18%;height:100%;background:#838f58;animation:preloader-progress 1.55s ease-in-out infinite}
+.preloader-card small{color:#282b4a;font:11px/1.2 "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}
+body.site-ready .site-preloader{opacity:0;visibility:hidden;pointer-events:none}
+body.site-ready>main{visibility:visible}
+@keyframes preloader-cat{0%,100%{transform:rotate(-7deg) translateY(2px)}50%{transform:rotate(7deg) translateY(-8px)}}
+@keyframes preloader-progress{0%{transform:translateX(-110%)}55%{width:44%}100%{transform:translateX(570%)}}
+@keyframes preloader-failsafe{to{opacity:0;visibility:hidden;pointer-events:none}}
+@keyframes main-failsafe{to{visibility:visible}}
+@media (max-width:800px){.preloader-card{min-height:360px;padding:28px 20px 26px}.preloader-cat{width:142px;height:110px}.preloader-phrase{font-size:23px}.hero{min-height:980px!important}.hero-photo{box-sizing:border-box!important;width:72%!important;height:auto!important;aspect-ratio:2/3!important;top:390px!important;right:3%!important;padding:10px!important;overflow:hidden!important}.hero-photo img{display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center center!important}}
+@media (prefers-reduced-motion:reduce){.preloader-cat,.preloader-track span{animation-duration:3s}.site-preloader,.preloader-phrase{transition:none}}
+
+/* Targeted mobile corrections. */
+@media (max-width:800px){
+  .hero-photo img{object-position:center 42%!important}
+  .hero-confidential .hero-secret-cat{width:54%!important;top:48px!important;left:39%!important}
+  .cat-line{width:20%!important;top:29%!important;right:0!important}
+  .education .since-note{position:relative!important;inset:auto!important;display:inline-block!important;width:auto!important;margin:18px 0 28px!important;padding:12px 18px!important;transform:rotate(-2deg)!important;z-index:12!important}
+  .human{padding-bottom:190px!important}
+  .human-cats{left:4%!important;bottom:28px!important;z-index:8!important}
+  .inspiration{padding-bottom:430px!important}
+  .inspiration-cloud{margin-bottom:0!important}
+  .insp-reading{top:auto!important;bottom:230px!important;left:2%!important}
+  .newyear-photo{top:auto!important;bottom:24px!important;right:2%!important}
+  .inspiration-morning{top:auto!important;bottom:34px!important;left:3%!important}
+  .inspiration-window{top:auto!important;bottom:30px!important;left:18%!important}
+  .inspiration-christmas-cat{top:auto!important;bottom:36px!important;right:32%!important}
+  .inspiration-grinch{top:auto!important;bottom:36px!important;right:48%!important}
+  .approach{padding-bottom:220px!important}
+  .approach .insp-cat{position:absolute!important;inset:auto auto 28px 7%!important;width:22%!important;max-width:108px!important;z-index:7!important}
+  .approach-cat{position:absolute!important;inset:auto 5% 30px auto!important;width:20%!important;max-width:100px!important;z-index:7!important}
+  .requests{padding-bottom:110px!important}
+  .requests .copy .request-cat{position:relative!important;inset:auto!important;display:block!important;width:min(22%,104px)!important;margin:14px 2% 16px auto!important;z-index:8!important}
+  .request-brain{top:auto!important;bottom:18px!important;left:auto!important;right:5%!important;width:min(18%,86px)!important}
+}
+/* Lightweight movement for static cat stickers. No animated media requests. */
+.css-motion {
+  transform-origin: 50% 85%;
+  will-change: transform;
+  animation: cat-gentle-wiggle 2.8s ease-in-out infinite;
+}
+
+.human-cats.css-motion {
+  animation-name: cat-small-dance;
+  animation-duration: 1.7s;
+}
+
+.request-cat.css-motion,
+.price-cat.css-motion {
+  animation-name: cat-soft-bounce;
+  animation-duration: 2.2s;
+}
+
+.media-cat.css-motion,
+.approach-cat.css-motion {
+  animation-name: cat-slow-sway;
+  animation-duration: 3.4s;
+}
+
+@keyframes cat-gentle-wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg) translateY(-2px); }
+}
+
+@keyframes cat-small-dance {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-5px) rotate(1.5deg); }
+}
+
+@keyframes cat-soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes cat-slow-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .css-motion { animation: none !important; }
+}
