@@ -197,8 +197,70 @@ body.site-ready>main{visibility:visible}
 }
 @media(prefers-reduced-motion:reduce){.first-screen-cat-v22{animation:none}}
 
+/* Desktop layout fixes v30. Mobile layout stays unchanged. */
+@media (min-width:801px){
+  /* Crop the portrait around Liza instead of showing mostly the wall. */
+  .first-screen-photo-v22{
+    right:6%;
+    width:min(42vw,620px);
+    height:min(66vw,650px);
+    object-fit:cover;
+    object-position:center 72%;
+  }
+
+  /* Keep the confidentiality note and cat together at the photo edge. */
+  .first-screen-note-v22{
+    top:70%;
+    left:35%;
+    width:15%;
+    max-width:205px;
+  }
+  .first-screen-arrow-v22{
+    top:73%;
+    left:47%;
+    transform:rotate(14deg);
+  }
+  .first-screen-cat-v22{
+    bottom:3%;
+    left:48%;
+    width:9%;
+  }
+
+  /* This asset contains a stray pixel and a disconnected arrow. */
+  .approach .read-minds{
+    display:none!important;
+  }
+
+  /* Put the animated repair cat directly after the word “работаю”. */
+  .requests .request-cat{
+    display:none!important;
+  }
+  .requests .copy h2::after{
+    content:"";
+    display:inline-block;
+    width:88px;
+    height:88px;
+    margin-left:12px;
+    background:url('/assets/cat-4502-animated.png') center/contain no-repeat;
+    vertical-align:-12px;
+  }
+}
+
 </style>
     <noscript><style>body.is-loading>main{visibility:visible}.site-preloader{display:none}</style></noscript>
+    <style id="mobile-immediate-render-v29">
+      @media (max-width: 800px) {
+        body.is-loading { overflow: auto !important; }
+        body.is-loading > main {
+          visibility: visible !important;
+          animation: none !important;
+        }
+        .site-preloader {
+          display: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
   </head>
   <body class="is-loading">
     <div class="site-preloader" role="status" aria-live="polite">
@@ -253,8 +315,12 @@ body.site-ready>main{visibility:visible}
           index = (index + 1) % phrases.length;
           if (phrase) phrase.textContent = phrases[index];
         }, 1850);
-        window.addEventListener("load", finishPreloader, { once: true });
-        setTimeout(finishPreloader, 7500);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", finishPreloader, { once: true });
+        } else {
+          finishPreloader();
+        }
+        setTimeout(finishPreloader, 4000);
       })();
     </script>
     <main>
