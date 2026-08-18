@@ -230,25 +230,17 @@ body.site-ready>main{visibility:visible}
   .approach .read-minds{
     display:none!important;
   }
-  .approach::before{
-    content:"";
-    position:absolute;
-    z-index:4;
-    top:9%;
-    right:0;
-    width:20%;
-    height:22%;
-    background:var(--paper);
-  }
+  /* The source PNG is damaged and renders as a stray fragment. */
   .approach .approach-psychologist{
-    display:block!important;
+    display:none!important;
+  }
+  /* Move the actual large cat from the left side to the upper right. */
+  .approach .insp-cat{
+    position:absolute!important;
+    inset:10% 3% auto auto!important;
+    width:15%!important;
+    max-width:190px!important;
     z-index:6!important;
-    width:14%!important;
-    top:10%!important;
-    right:2%!important;
-    bottom:auto!important;
-    left:auto!important;
-    transform:rotate(5deg)!important;
   }
 
   /* Put the animated repair cat directly after the word “работаю”. */
