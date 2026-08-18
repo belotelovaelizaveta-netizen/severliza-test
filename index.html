@@ -210,25 +210,45 @@ body.site-ready>main{visibility:visible}
 
   /* Keep the confidentiality note and cat together at the photo edge. */
   .first-screen-note-v22{
-    top:70%;
-    left:35%;
-    width:15%;
-    max-width:205px;
+    top:73%;
+    left:39%;
+    width:13%;
+    max-width:185px;
   }
   .first-screen-arrow-v22{
-    top:73%;
-    left:47%;
+    top:76%;
+    left:50%;
     transform:rotate(14deg);
   }
   .first-screen-cat-v22{
     bottom:3%;
-    left:48%;
+    left:52%;
     width:9%;
   }
 
   /* This asset contains a stray pixel and a disconnected arrow. */
   .approach .read-minds{
     display:none!important;
+  }
+  .approach::before{
+    content:"";
+    position:absolute;
+    z-index:4;
+    top:9%;
+    right:0;
+    width:20%;
+    height:22%;
+    background:var(--paper);
+  }
+  .approach .approach-psychologist{
+    display:block!important;
+    z-index:6!important;
+    width:14%!important;
+    top:10%!important;
+    right:2%!important;
+    bottom:auto!important;
+    left:auto!important;
+    transform:rotate(5deg)!important;
   }
 
   /* Put the animated repair cat directly after the word “работаю”. */
