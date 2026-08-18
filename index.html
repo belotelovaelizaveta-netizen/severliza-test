@@ -199,6 +199,11 @@ body.site-ready>main{visibility:visible}
 
 /* Desktop layout fixes v30. Mobile layout stays unchanged. */
 @media (min-width:801px){
+  /* Return the approach heading to its earlier left-hand position. */
+  .approach .copy{
+    margin-left:20%!important;
+  }
+
   /* Crop the portrait around Liza instead of showing mostly the wall. */
   .first-screen-photo-v22{
     right:6%;
@@ -210,25 +215,37 @@ body.site-ready>main{visibility:visible}
 
   /* Keep the confidentiality note and cat together at the photo edge. */
   .first-screen-note-v22{
-    top:70%;
-    left:35%;
-    width:15%;
-    max-width:205px;
+    top:73%;
+    left:39%;
+    width:13%;
+    max-width:185px;
   }
   .first-screen-arrow-v22{
-    top:73%;
-    left:47%;
+    top:76%;
+    left:50%;
     transform:rotate(14deg);
   }
   .first-screen-cat-v22{
     bottom:3%;
-    left:48%;
+    left:52%;
     width:9%;
   }
 
   /* This asset contains a stray pixel and a disconnected arrow. */
   .approach .read-minds{
     display:none!important;
+  }
+  /* The source PNG is damaged and renders as a stray fragment. */
+  .approach .approach-psychologist{
+    display:none!important;
+  }
+  /* Move the actual large cat from the left side to the upper right. */
+  .approach .insp-cat{
+    position:absolute!important;
+    inset:10% 3% auto auto!important;
+    width:15%!important;
+    max-width:190px!important;
+    z-index:6!important;
   }
 
   /* Put the animated repair cat directly after the word “работаю”. */
@@ -259,6 +276,12 @@ body.site-ready>main{visibility:visible}
           display: none !important;
           animation: none !important;
         }
+      }
+    </style>
+    <style id="desktop-approach-final-v34">
+      @media (min-width:801px){
+        #approach-heading-final{margin-left:12%!important}
+        #approach-big-cat-final{position:absolute!important;inset:10% 3% auto auto!important;width:15%!important;max-width:190px!important;z-index:6!important}
       }
     </style>
   </head>
@@ -662,7 +685,7 @@ body.site-ready>main{visibility:visible}
         />
       </section>
       <section class="approach sheet" id="approach">
-        <div class="copy">
+        <div class="copy" id="approach-heading-final">
           <p class="kicker">особенности терапии со мной</p>
           <h2>Здесь можно быть <span class="doodle-title">собой</span></h2>
         </div>
@@ -709,23 +732,14 @@ body.site-ready>main{visibility:visible}
           alt=""
           aria-hidden="true"
         /><img loading="lazy" fetchpriority="low" decoding="async"
-          class="sticker read-minds"
-          src="/assets/read-minds.png"
-          alt=""
-          aria-hidden="true"
-        /><img loading="lazy" fetchpriority="low" decoding="async"
           class="sticker dsm-fire"
           src="/assets/dsm-fire.png"
-          alt=""
-          aria-hidden="true"
-        /><img loading="lazy" fetchpriority="low" decoding="async"
-          class="sticker approach-psychologist extra-collage"
-          src="/assets/psychologist-sticker.png"
           alt=""
           aria-hidden="true"
         />
         <img loading="lazy" fetchpriority="low" decoding="async"
           class="sticker css-motion insp-cat"
+          id="approach-big-cat-final"
           src="/assets/cat-4501-animated.png"
           alt=""
           aria-hidden="true"
