@@ -1,0 +1,6 @@
+const CACHE='severliza-rest-offline-14c5481999fe';
+const base=new URL('./',self.location.href);
+const file=name=>new URL(name,base).href;
+self.addEventListener('install',event=>event.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png'].map(file));await self.skipWaiting();})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const k of await caches.keys())if(k.startsWith('severliza-rest-offline-')&&k!==CACHE)await caches.delete(k);await self.clients.claim();})()));
+self.addEventListener('fetch',event=>{const r=event.request,u=new URL(r.url);if(r.method!=='GET'||u.origin!==base.origin||!u.pathname.startsWith(base.pathname))return;if(r.mode==='navigate'){event.respondWith((async()=>{try{const response=await fetch(r);if(response.ok&&response.headers.get('Content-Type')?.includes('text/html')){const c=await caches.open(CACHE);await c.put(file('index.html'),response.clone());}return response;}catch{const c=await caches.open(CACHE);return await c.match(file('index.html'))||new Response('Для первой загрузки планера нужен интернет',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}});}})());}else event.respondWith((async()=>{const c=await caches.open(CACHE);return await c.match(r)||fetch(r);})());});
