@@ -1,4 +1,4 @@
-const CACHE='severliza-rest-offline-14c5481999fe';
+const CACHE='severliza-rest-offline-8d0ddc363570';
 const base=new URL('./',self.location.href);
 const file=name=>new URL(name,base).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png'].map(file));await self.skipWaiting();})()));
