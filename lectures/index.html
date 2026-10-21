@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://severliza.ru/lectures/" />
+    <title>Лекции по психологии — Елизавета Север</title>
+    <meta
+      name="description"
+      content="Лекции психолога Елизаветы Север о нереализованном потенциале и творческой работе с убеждениями и автоматическими реакциями. Предзапись на выход лекций."
+    />
+    <link rel="stylesheet" href="/assets/index-d2fq4Kju.css?v=28" />
+    <style>
+      :root {
+        --ink: #282b4a;
+        --paper: #eee8da;
+        --pink: #f4c9d6;
+        --wine: #830626;
+        --green: #838f58;
+        --yellow: #f1cb5b;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background-color: var(--paper);
+        background-image: radial-gradient(#282b4a24 .75px, transparent .75px);
+        background-size: 7px 7px;
+      }
+      a { color: inherit; }
+      .lectures-page { overflow: hidden; }
+      .lectures-sheet {
+        position: relative;
+        width: min(1180px, calc(100% - 32px));
+        margin: 18px auto;
+        padding: clamp(28px, 5vw, 72px);
+        background: rgba(247, 240, 230, .96);
+        border: 1px solid rgba(40, 43, 74, .22);
+        box-shadow: 10px 12px 0 rgba(40, 43, 74, .13);
+      }
+      .lectures-back {
+        display: inline-block;
+        margin-bottom: 42px;
+        font: 700 13px/1.2 "Courier New", monospace;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 5px;
+      }
+      .lectures-kicker {
+        margin: 0 0 12px;
+        color: var(--wine);
+        font: 700 13px/1.2 "Courier New", monospace;
+        letter-spacing: .11em;
+        text-transform: uppercase;
+      }
+      .lectures-hero h1 {
+        max-width: 920px;
+        margin: 0;
+        font: 700 clamp(55px, 9vw, 112px)/.85 Georgia, serif;
+        letter-spacing: -.06em;
+      }
+      .lectures-hero h1 span {
+        display: inline-block;
+        color: var(--wine);
+        font-style: italic;
+        transform: rotate(-2deg);
+      }
+      .lectures-lead {
+        max-width: 720px;
+        margin: 34px 0 8px;
+        font: 400 clamp(20px, 2.2vw, 29px)/1.24 Georgia, serif;
+      }
+      .status-note {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 11px 17px;
+        background: var(--yellow);
+        border: 1px solid var(--ink);
+        box-shadow: 5px 6px 0 var(--ink);
+        font: 700 13px/1.2 "Courier New", monospace;
+        text-transform: uppercase;
+        transform: rotate(-1deg);
+      }
+      .lecture-list {
+        display: grid;
+        gap: 42px;
+        width: min(1180px, calc(100% - 32px));
+        margin: 42px auto;
+      }
+      .lecture-card {
+        position: relative;
+        padding: clamp(28px, 5vw, 64px);
+        border: 1px solid var(--ink);
+        box-shadow: 10px 12px 0 var(--ink);
+      }
+      .lecture-card:first-child { background: var(--pink); }
+      .lecture-card:last-child { background: #d8dfbf; }
+      .lecture-number {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--wine);
+        font: 700 15px/1 "Courier New", monospace;
+        letter-spacing: .12em;
+      }
+      .lecture-card h2 {
+        max-width: 940px;
+        margin: 0;
+        font: 700 clamp(34px, 5vw, 66px)/.96 Georgia, serif;
+        letter-spacing: -.035em;
+      }
+      .for-whom {
+        max-width: 850px;
+        margin: 26px 0;
+        padding: 16px 18px;
+        background: rgba(247, 240, 230, .78);
+        border-left: 7px solid var(--wine);
+        font: italic 700 clamp(18px, 2vw, 23px)/1.3 Georgia, serif;
+      }
+      .annotation {
+        max-width: 850px;
+        margin: 0 0 32px;
+        font: 400 19px/1.55 Georgia, serif;
+      }
+      .lecture-card h3 {
+        margin: 0 0 16px;
+        font: 700 14px/1.2 "Courier New", monospace;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+      .contents {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 28px;
+        max-width: 980px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: point;
+      }
+      .contents li {
+        position: relative;
+        min-height: 54px;
+        padding: 12px 12px 12px 50px;
+        border-bottom: 1px solid rgba(40, 43, 74, .28);
+        font: 400 16px/1.4 "Courier New", monospace;
+        counter-increment: point;
+      }
+      .contents li::before {
+        content: counter(point, decimal-leading-zero);
+        position: absolute;
+        left: 4px;
+        top: 12px;
+        color: var(--wine);
+        font-weight: 700;
+      }
+      .waitlist { background: var(--pink); }
+      .waitlist-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr);
+        gap: clamp(30px, 6vw, 80px);
+        align-items: start;
+      }
+      .waitlist h2 {
+        margin: 0 0 22px;
+        font: 700 clamp(42px, 7vw, 82px)/.9 Georgia, serif;
+        letter-spacing: -.05em;
+      }
+      .waitlist-copy > p:not(.lectures-kicker) {
+        max-width: 600px;
+        font: 400 19px/1.5 Georgia, serif;
+      }
+      .waitlist-form {
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--ink);
+        box-shadow: 8px 9px 0 var(--wine);
+      }
+      .waitlist-form label,
+      .waitlist-form legend {
+        display: block;
+        font: 700 13px/1.3 "Courier New", monospace;
+      }
+      .waitlist-form input[type="email"] {
+        width: 100%;
+        margin-top: 8px;
+        padding: 14px 12px;
+        color: var(--ink);
+        background: white;
+        border: 1px solid var(--ink);
+        border-radius: 0;
+        font: 400 17px/1.2 Georgia, serif;
+      }
+      .waitlist-form fieldset {
+        margin: 22px 0;
+        padding: 0;
+        border: 0;
+      }
+      .lecture-choice {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .lecture-choice label,
+      .consent-row {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: 9px;
+        align-items: start;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+      .lecture-choice input,
+      .consent-row input { margin: 2px 0 0; width: 18px; height: 18px; accent-color: var(--wine); }
+      .form-honeypot { position: absolute !important; left: -10000px !important; }
+      .waitlist-submit {
+        width: 100%;
+        margin-top: 22px;
+        padding: 15px 18px;
+        color: white;
+        background: var(--wine);
+        border: 1px solid var(--ink);
+        box-shadow: 5px 6px 0 var(--ink);
+        font: 700 15px/1.2 "Courier New", monospace;
+        cursor: pointer;
+      }
+      .waitlist-submit:disabled { opacity: .65; cursor: wait; }
+      .form-status { min-height: 42px; margin-top: 18px; font: 700 14px/1.4 "Courier New", monospace; }
+      .form-success { color: #41621f; }
+      .form-error { color: var(--wine); }
+      .lectures-footer { padding-top: 42px; padding-bottom: 42px; }
+      .lectures-footer h2 { margin: 0 0 18px; font: 700 38px/1 Georgia, serif; }
+      .lectures-footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+      .lectures-footer-links a { font: 700 13px/1.4 "Courier New", monospace; }
+      .lectures-legal { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 30px; font: 400 12px/1.4 "Courier New", monospace; }
+      .lectures-copyright { margin-top: 16px; font: 400 12px/1.4 "Courier New", monospace; }
+      @media (max-width: 760px) {
+        .lectures-sheet, .lecture-list { width: min(100% - 20px, 1180px); }
+        .lectures-sheet { padding: 28px 20px 38px; box-shadow: 6px 7px 0 rgba(40, 43, 74, .13); }
+        .lectures-back { margin-bottom: 30px; }
+        .lectures-hero h1 { font-size: clamp(50px, 16vw, 75px); }
+        .lecture-card { padding: 28px 20px 34px; box-shadow: 6px 7px 0 var(--ink); }
+        .lecture-card h2 { font-size: clamp(32px, 9vw, 48px); }
+        .contents { grid-template-columns: 1fr; }
+        .waitlist-grid { grid-template-columns: 1fr; }
+        .waitlist-form { padding: 20px 16px; box-shadow: 6px 7px 0 var(--wine); }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="lectures-page">
+      <header class="lectures-sheet lectures-hero">
+        <a class="lectures-back" href="/">← Елизавета Север · психолог</a>
+        <p class="lectures-kicker">две лекции · скоро</p>
+        <h1>Понять себя — и что-нибудь с этим <span>сделать</span></h1>
+        <p class="lectures-lead">
+          Две лекции для людей, которые уже многое о себе понимают, но всё ещё
+          живут между «я могу больше», «я всё осознаю» и старой доброй
+          автоматической реакцией.
+        </p>
+        <span class="status-note">сейчас готовятся к выходу</span>
+      </header>
+
+      <section class="lecture-list" aria-label="Лекции">
+        <article class="lecture-card" id="triz">
+          <span class="lecture-number">ЛЕКЦИЯ 01</span>
+          <h2>
+            Я все понимаю, но продолжаю верить в другое: творческий взгляд
+            (ТРИЗ) на работу с убеждениями и другими автоматическими реакциями
+          </h2>
+          <p class="for-whom">
+            ☺ Для тех, кто всё давно себе объяснил, но действует по-старому —
+            или не может до конца поверить в новое, более здоровое и правильное.
+          </p>
+          <p class="annotation">
+            Понимание причины не всегда меняет реакцию. Иногда мы можем идеально
+            объяснить себе, почему боимся отказать, выбираем знакомый сценарий
+            или снова делаем то, что решили больше не делать, — и всё равно
+            повторяем это. В лекции попробуем не спорить с убеждением, а
+            рассмотреть его как задачу с противоречием и поискать решения там,
+            где привычная логика видит только два плохих варианта.
+          </p>
+          <h3>Содержание</h3>
+          <ol class="contents">
+            <li>Почему «я всё понимаю» не означает «теперь я действую иначе»</li>
+            <li>Как поймать убеждение или автоматическую реакцию в конкретной ситуации</li>
+            <li>Как найти два важных, но будто бы несовместимых требования</li>
+            <li>Как превратить внутреннее противоречие в вопрос для поиска</li>
+            <li>Зачем переносить задачу в аналогию — например, в город со странным законом</li>
+            <li>Как придумать минимум пять решений, не оценивая их слишком рано</li>
+            <li>Как перенести найденные ходы обратно в собственную жизнь</li>
+            <li>Как выбрать посильное действие и уточнить новое правило после проверки</li>
+          </ol>
+        </article>
+
+        <article class="lecture-card" id="potential">
+          <span class="lecture-number">ЛЕКЦИЯ 02</span>
+          <h2>
+            Сказ о нереализованном потенциале, или «а ведь я подавал(а) надежды»
+          </h2>
+          <p class="for-whom">
+            ☺ Для тех, кто уверен, что может и должен достичь бОльшего, но что-то
+            всё никак.
+          </p>
+          <p class="annotation">
+            Это не лекция о том, как наконец стать лучшей версией себя. Она о
+            том, как реальные способности постепенно превращаются в долг перед
+            воображаемой биографией: «раз можешь — должен», а обычная жизнь рядом
+            с ней начинает казаться доказательством собственной
+            несостоятельности. Разберём, почему идея потенциала одновременно
+            поддерживает нас и удерживает в ожидании будущего величия.
+          </p>
+          <h3>Содержание</h3>
+          <ol class="contents">
+            <li>Разрыв между жизнью, которая получилась, и жизнью, которая «должна была»</li>
+            <li>Потенциал как возможность развития, а не обещание судьбы</li>
+            <li>Как детское «ты можешь больше» превращается во взрослое «ты обязан»</li>
+            <li>Почему нереализованность бьёт не только по планам, но и по самоценности</li>
+            <li>Нарциссическая уязвимость, стыд и страх оказаться самым обычным человеком</li>
+            <li>Прокрастинация, интеллектуализация, рационализация и обесценивание малых шагов</li>
+            <li>Как разобрать свои развилки без суда над прошлой версией себя</li>
+            <li>Где моё желание, а где необходимость доказать, что надежды были не напрасны</li>
+            <li>Что можно сделать в настоящем — и что вовсе не обязательно реализовывать</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="lectures-sheet waitlist" id="waitlist">
+        <div class="waitlist-grid">
+          <div class="waitlist-copy">
+            <p class="lectures-kicker">предзапись без оплаты</p>
+            <h2>Узнать о выходе первой</h2>
+            <p>
+              Оставьте e-mail и отметьте интересующие лекции. Когда они выйдут,
+              я пришлю одно письмо со ссылкой и возможностью купить их раньше
+              общего анонса.
+            </p>
+          </div>
+
+          <form class="waitlist-form" novalidate>
+            <label class="form-honeypot" aria-hidden="true">
+              Не заполняйте это поле
+              <input tabindex="-1" autocomplete="off" name="website" />
+            </label>
+            <label>
+              Ваш e-mail
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                placeholder="name@example.com"
+                required
+              />
+            </label>
+            <fieldset>
+              <legend>Какие лекции вас интересуют?</legend>
+              <div class="lecture-choice">
+                <label>
+                  <input type="checkbox" name="lecture" value="ТРИЗ и убеждения" checked />
+                  <span>ТРИЗ и работа с убеждениями</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="lecture" value="Нереализованный потенциал" checked />
+                  <span>Сказ о нереализованном потенциале</span>
+                </label>
+              </div>
+            </fieldset>
+            <label class="consent-row">
+              <input type="checkbox" name="consent" required />
+              <span>
+                Я согласен(на) на <a href="/consent" target="_blank">обработку e-mail</a>
+                и получение одного письма о выходе и начале продаж выбранных лекций.
+              </span>
+            </label>
+            <button class="waitlist-submit" type="submit">записаться в список →</button>
+            <div class="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="lectures-sheet lectures-footer">
+        <h2>Елизавета Север</h2>
+        <div class="lectures-footer-links">
+          <a href="/">вернуться на главную →</a>
+          <a href="https://t.me/lizasever" target="_blank" rel="noreferrer">Telegram ↗</a>
+          <a href="https://www.youtube.com/@lizzasever" target="_blank" rel="noreferrer">YouTube ↗</a>
+        </div>
+        <div class="lectures-legal">
+          <a href="/od">Политика обработки персональных данных</a>
+          <a href="/consent">Согласие на обработку данных</a>
+          <a href="/ps">Пользовательское соглашение</a>
+          <a href="/oferta">Публичная оферта</a>
+        </div>
+        <div class="lectures-copyright">© Елизавета Север, 2026 · 18+</div>
+      </footer>
+    </main>
+
+    <script>
+      (() => {
+        const endpoint =
+          "https://script.google.com/macros/s/AKfycbwvamnywdnl3Q4N_OL5RPp6iYN8QujIl2kWGISLOMKth9_mKupltNyxaffvDkhEzqw/exec";
+        const form = document.querySelector(".waitlist-form");
+        const status = form.querySelector(".form-status");
+        const submit = form.querySelector('[type="submit"]');
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          status.className = "form-status";
+
+          const email = form.elements.email.value.trim();
+          const lectures = [...form.querySelectorAll('input[name="lecture"]:checked')]
+            .map((input) => input.value);
+
+          if (!form.elements.email.validity.valid) {
+            status.className = "form-status form-error";
+            status.textContent = "Проверьте, пожалуйста, e-mail.";
+            form.elements.email.focus();
+            return;
+          }
+          if (!lectures.length) {
+            status.className = "form-status form-error";
+            status.textContent = "Выберите хотя бы одну лекцию.";
+            return;
+          }
+          if (!form.elements.consent.checked) {
+            status.className = "form-status form-error";
+            status.textContent = "Нужно подтвердить согласие на письмо о выходе лекции.";
+            return;
+          }
+
+          const data = new URLSearchParams({
+            name: "Предзапись на лекции",
+            contact: email,
+            meetingFormat: "Предзапись на лекции",
+            messenger: "Email",
+            comment: `Выбрано: ${lectures.join(", ")}`,
+            consent: "yes",
+            source: window.location.href,
+            website: form.elements.website.value
+          });
+
+          submit.disabled = true;
+          submit.textContent = "отправляю…";
+          status.textContent = "";
+
+          try {
+            await fetch(endpoint, {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+              },
+              body: data.toString()
+            });
+            form.reset();
+            status.className = "form-status form-success";
+            status.textContent =
+              "Готово! Когда выбранные лекции выйдут, письмо придёт на этот адрес.";
+          } catch (_) {
+            status.className = "form-status form-error";
+            status.textContent =
+              "Не получилось отправить. Попробуйте ещё раз или напишите мне в Telegram.";
+          } finally {
+            submit.disabled = false;
+            submit.textContent = "записаться в список →";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
