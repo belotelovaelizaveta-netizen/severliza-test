@@ -17,28 +17,55 @@
         --paper: #eee8da;
         --pink: #f4c9d6;
         --wine: #830626;
-        --green: #838f58;
-        --yellow: #f1cb5b;
+        --olive: #838f58;
+        --blue: #c0d6ee;
+        --yellow: #e4b82f;
+        --page: #d9d0bf;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
         color: var(--ink);
-        background-color: var(--paper);
-        background-image: radial-gradient(#282b4a24 .75px, transparent .75px);
-        background-size: 7px 7px;
+        background: var(--page);
+        font-family: Arial, Helvetica, sans-serif;
       }
       a { color: inherit; }
       .lectures-page { overflow: hidden; }
       .lectures-sheet {
+        isolation: isolate;
         position: relative;
         width: min(1180px, calc(100% - 32px));
         margin: 18px auto;
         padding: clamp(28px, 5vw, 72px);
-        background: rgba(247, 240, 230, .96);
-        border: 1px solid rgba(40, 43, 74, .22);
-        box-shadow: 10px 12px 0 rgba(40, 43, 74, .13);
+        background: var(--paper);
+        border: 0;
+        box-shadow: 10px 12px 0 var(--ink);
+        overflow: hidden;
+      }
+      .lectures-sheet::before,
+      .lecture-card::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background-image: radial-gradient(#5a493c 0.55px, transparent 0.7px);
+        background-size: 5px 5px;
+        opacity: .2;
+        pointer-events: none;
+      }
+      .lectures-sheet::after,
+      .lecture-card::after {
+        content: "";
+        position: absolute;
+        z-index: 4;
+        top: 18px;
+        left: 43%;
+        width: 130px;
+        height: 34px;
+        background: #b9976d;
+        transform: rotate(-3deg);
+        pointer-events: none;
       }
       .lectures-back {
         display: inline-block;
@@ -57,10 +84,10 @@
         text-transform: uppercase;
       }
       .lectures-hero h1 {
-        max-width: 920px;
+        max-width: 850px;
         margin: 0;
-        font: 700 clamp(55px, 9vw, 112px)/.85 Georgia, serif;
-        letter-spacing: -.06em;
+        font: 400 clamp(52px, 7.4vw, 92px)/.88 Georgia, serif;
+        letter-spacing: -.065em;
       }
       .lectures-hero h1 span {
         display: inline-block;
@@ -91,13 +118,15 @@
         margin: 42px auto;
       }
       .lecture-card {
+        isolation: isolate;
         position: relative;
-        padding: clamp(28px, 5vw, 64px);
-        border: 1px solid var(--ink);
+        padding: clamp(28px, 5vw, 58px);
+        border: 0;
         box-shadow: 10px 12px 0 var(--ink);
+        overflow: hidden;
       }
       .lecture-card:first-child { background: var(--pink); }
-      .lecture-card:last-child { background: #d8dfbf; }
+      .lecture-card:last-child { background: var(--blue); }
       .lecture-number {
         display: block;
         margin-bottom: 20px;
@@ -106,23 +135,23 @@
         letter-spacing: .12em;
       }
       .lecture-card h2 {
-        max-width: 940px;
+        max-width: 900px;
         margin: 0;
-        font: 700 clamp(34px, 5vw, 66px)/.96 Georgia, serif;
-        letter-spacing: -.035em;
+        font: 400 clamp(34px, 4.2vw, 56px)/1 Georgia, serif;
+        letter-spacing: -.045em;
       }
       .for-whom {
         max-width: 850px;
         margin: 26px 0;
         padding: 16px 18px;
-        background: rgba(247, 240, 230, .78);
+        background: var(--paper);
         border-left: 7px solid var(--wine);
-        font: italic 700 clamp(18px, 2vw, 23px)/1.3 Georgia, serif;
+        font: italic 400 clamp(17px, 1.7vw, 21px)/1.35 Georgia, serif;
       }
       .annotation {
         max-width: 850px;
         margin: 0 0 32px;
-        font: 400 19px/1.55 Georgia, serif;
+        font: 400 clamp(17px, 1.4vw, 20px)/1.6 Arial, Helvetica, sans-serif;
       }
       .lecture-card h3 {
         margin: 0 0 16px;
@@ -144,8 +173,8 @@
         position: relative;
         min-height: 54px;
         padding: 12px 12px 12px 50px;
-        border-bottom: 1px solid rgba(40, 43, 74, .28);
-        font: 400 16px/1.4 "Courier New", monospace;
+        border-bottom: 1px solid var(--ink);
+        font: 400 14px/1.4 "Courier New", monospace;
         counter-increment: point;
       }
       .contents li::before {
@@ -156,7 +185,7 @@
         color: var(--wine);
         font-weight: 700;
       }
-      .waitlist { background: var(--pink); }
+      .waitlist { background: var(--paper); }
       .waitlist-grid {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr);
@@ -165,17 +194,17 @@
       }
       .waitlist h2 {
         margin: 0 0 22px;
-        font: 700 clamp(42px, 7vw, 82px)/.9 Georgia, serif;
-        letter-spacing: -.05em;
+        font: 400 clamp(38px, 5.5vw, 66px)/.94 Georgia, serif;
+        letter-spacing: -.055em;
       }
       .waitlist-copy > p:not(.lectures-kicker) {
         max-width: 600px;
-        font: 400 19px/1.5 Georgia, serif;
+        font: 400 clamp(17px, 1.4vw, 20px)/1.6 Arial, Helvetica, sans-serif;
       }
       .waitlist-form {
         padding: 24px;
-        background: var(--paper);
-        border: 1px solid var(--ink);
+        background: var(--pink);
+        border: 2px solid var(--wine);
         box-shadow: 8px 9px 0 var(--wine);
       }
       .waitlist-form label,
@@ -188,7 +217,7 @@
         margin-top: 8px;
         padding: 14px 12px;
         color: var(--ink);
-        background: white;
+        background: var(--paper);
         border: 1px solid var(--ink);
         border-radius: 0;
         font: 400 17px/1.2 Georgia, serif;
@@ -231,18 +260,23 @@
       .form-success { color: #41621f; }
       .form-error { color: var(--wine); }
       .lectures-footer { padding-top: 42px; padding-bottom: 42px; }
-      .lectures-footer h2 { margin: 0 0 18px; font: 700 38px/1 Georgia, serif; }
+      .lectures-footer h2 { margin: 0 0 18px; font: 400 38px/1 Georgia, serif; }
       .lectures-footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
       .lectures-footer-links a { font: 700 13px/1.4 "Courier New", monospace; }
       .lectures-legal { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 30px; font: 400 12px/1.4 "Courier New", monospace; }
       .lectures-copyright { margin-top: 16px; font: 400 12px/1.4 "Courier New", monospace; }
       @media (max-width: 760px) {
         .lectures-sheet, .lecture-list { width: min(100% - 20px, 1180px); }
-        .lectures-sheet { padding: 28px 20px 38px; box-shadow: 6px 7px 0 rgba(40, 43, 74, .13); }
+        .lectures-sheet { padding: 28px 20px 38px; box-shadow: 6px 7px 0 var(--ink); }
         .lectures-back { margin-bottom: 30px; }
-        .lectures-hero h1 { font-size: clamp(50px, 16vw, 75px); }
+        .lectures-hero h1 { font-size: clamp(44px, 13vw, 60px); }
         .lecture-card { padding: 28px 20px 34px; box-shadow: 6px 7px 0 var(--ink); }
-        .lecture-card h2 { font-size: clamp(32px, 9vw, 48px); }
+        .lecture-card h2 { font-size: clamp(29px, 8vw, 40px); }
+        .lecture-number { font-size: 13px; }
+        .for-whom { font-size: 17px; }
+        .annotation { font-size: 17px; }
+        .contents li { font-size: 13px; }
+        .waitlist h2 { font-size: clamp(36px, 10vw, 48px); }
         .contents { grid-template-columns: 1fr; }
         .waitlist-grid { grid-template-columns: 1fr; }
         .waitlist-form { padding: 20px 16px; box-shadow: 6px 7px 0 var(--wine); }
